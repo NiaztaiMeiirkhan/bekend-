@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
-from datetime import datetime
 import markdown
 
 # --- App Configuration ---
@@ -12,9 +11,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "http://localhost",
-    "https://your-frontend-domain.vercel.app",  # Vercel domain
-    "https://your-frontend-domain.netlify.app",  # Netlify domain
-    "*"  # Production үшін барлық домендерді рұқсат ету (қауіпсіздік үшін нақты домендерді көрсетіңіз)
+    "*"
 ]
 
 app.add_middleware(
