@@ -1,5 +1,20 @@
 {
 	"dependencies": {
 		"axios": "^1.10.0"
-	}
+	},
+	"name": "minimalist-blog",
+	"version": "1.0.0",
+	"description": "Минималистичный блог с FastAPI + Next.js",
+	"scripts": {
+		"dev": "./start.sh",
+		"start": "./start.sh",
+		"install-all": "cd backend && pip3 install -r requirements.txt && cd ../frontend && pnpm install",
+		"backend": "cd backend && python3 -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+		"frontend": "cd frontend && pnpm dev",
+		"build": "cd frontend && pnpm build",
+		"deploy": "cd frontend && vercel"
+	},
+	"keywords": ["blog", "fastapi", "nextjs", "markdown", "typescript"],
+	"author": "Your Name",
+	"license": "MIT"
 }
